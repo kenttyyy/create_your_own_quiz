@@ -17,8 +17,14 @@ while True:
         correct_answer = input("Enter the correct answer ")
 
 # Write the collected data to a text file.
-
-
+        with open("quiz_questions.txt", "a") as file:
+            file.write(f"Question: {question}\n")
+            file.write(f"A. {choice_one}\n")
+            file.write(f"B. {choice_two}\n")
+            file.write(f"C. {choice_three}\n")
+            file.write(f"D. {choice_four}\n")
+            file.write(f"Correct Answer: {correct_answer}\n")
+            file.write("\n")
 
 # Ask another question until the user chose to exit.
 
